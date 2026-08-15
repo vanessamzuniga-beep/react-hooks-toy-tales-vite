@@ -22,7 +22,7 @@ useEffect(() => {
 
         {/* Render the collection of ToyCards */}
         {toys.map((toy) => (
-          <ToyCard key={toy.id} toy={toy} />
+          <ToyCard key={toy.id} toy={toy} setToys={setToys} />
         ))}
 
       </div>
