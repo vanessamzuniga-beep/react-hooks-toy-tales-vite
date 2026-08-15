@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ToyCard from "./ToyCard";
+import ToyCard from "./ToyCard"
+import ToyForm from "./ToyForm"
 
 function ToyContainer() {
   
@@ -14,14 +15,18 @@ useEffect(() => {
 }, [])
 
   return (
-    <div id="toy-collection">
+    <div>
+      <ToyForm setToys={setToys} />
 
-      {/* Render the collection of ToyCards */}
-      {toys.map((toy) => (
-        <ToyCard key={toy.id} toy={toy} />
-      ))}
+      <div id="toy-collection">
+
+        {/* Render the collection of ToyCards */}
+        {toys.map((toy) => (
+          <ToyCard key={toy.id} toy={toy} />
+        ))}
 
       </div>
+    </div>
   );
 }
 
