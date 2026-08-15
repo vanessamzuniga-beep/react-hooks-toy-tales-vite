@@ -40,6 +40,7 @@ function ToyForm({setToys}) {
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter a toy's name..."
           className="input-text"
+          required
         />
         <br />
         <input
@@ -49,6 +50,7 @@ function ToyForm({setToys}) {
           onChange={(e) => setImage(e.target.value)}
           placeholder="Enter a toy's image URL..."
           className="input-text"
+          required
         />
         <br />
         <input
